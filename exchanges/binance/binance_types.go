@@ -202,3 +202,20 @@ type QueryOrderData struct {
 	Time          int64   `json:"time"`
 	IsWorking     bool    `json:"isWorking"`
 }
+
+// WebsocketSubscribe takes in subscrition information
+type WebsocketSubscribe struct {
+	Type      string `json:"type"`
+	ProductID string `json:"product_id"`
+}
+
+// WebsocketReceived holds websocket received values
+type WebsocketReceived struct {
+	Type     string  `json:"type"`
+	Time     string  `json:"time"`
+	Sequence int     `json:"sequence"`
+	OrderID  string  `json:"order_id"`
+	Size     float64 `json:"size,string"`
+	Price    float64 `json:"price,string"`
+	Side     string  `json:"side"`
+}
